@@ -1,13 +1,15 @@
 - if user_signed_in?
-  %h1 Plan
-  / ユーザーがログインしているか調べる
-  / ユーザーがログインしていた時の処理
-  %h2
-    現在 #{current_user.name} さんがログインしています
-  / ここを追加します
-  %h4
-  = link_to "ログアウト", destroy_user_session_path, method: :delete
-  / ログアウトをする
+  .page-main
+    .page-main__image
+      %h1 Plan
+      / ユーザーがログインしているか調べる
+      / ユーザーがログインしていた時の処理
+      %h2
+        現在 #{current_user.name} さんでログインしています
+      / ここを追加します
+      %h4
+      = link_to "ログアウト", destroy_user_session_path, method: :delete
+      / ログアウトをする
 - else
   / ユーザーがログインしていなかった時の処理
   .top-main
