@@ -1,0 +1,26 @@
+.up-main
+  %h2 Sign up
+  = form_with model: @user, local: true do |f|
+    = devise_error_messages!
+    .field
+      = f.label :email
+      %br/
+      = f.email_field :email, autofocus: true, autocomplete: "email"
+    .up-main__field
+      = f.label :name
+      %br/
+      = f.text_field :name
+    .up-main__field
+      = f.label :password
+      - if @minimum_password_length
+        %em
+          (#{@minimum_password_length} characters minimum)
+      %br/
+      = f.password_field :password, autocomplete: "new-password"
+    .up-main__field
+      = f.label :password_confirmation
+      %br/
+      = f.password_field :password_confirmation, autocomplete: "new-password"
+    .up-main__actions
+      = f.submit "Sign up"
+  = render "devise/shared/links"
