@@ -1,0 +1,21 @@
+- if user_signed_in?
+  .page-main
+    .page-main__image
+      %h1 Plan
+      / ユーザーがログインしているか調べる
+      / ユーザーがログインしていた時の処理
+      %h2
+        現在 #{current_user.name} さんでログインしています
+      / ここを追加します
+      %h4
+      = link_to "ログアウト", destroy_user_session_path, method: :delete
+      / ログアウトをする
+- else
+  / ユーザーがログインしていなかった時の処理
+  .top-main
+    %h1 schedule
+    .top-main__text
+      = link_to "Current schedule", new_user_session_path, class: 'post'
+      / ログイン画面に移行する
+      = link_to "New schedule", new_user_registration_path, class: 'post'
+      / 新規登録画面に移行する
