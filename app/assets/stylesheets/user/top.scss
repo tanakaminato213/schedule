@@ -1,0 +1,41 @@
+a:link{
+  color: white;
+}
+a:visited{
+  color: white;
+}
+
+.top-main{
+  background-image: image-url("top.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  h1{
+    font-size: 60px;
+    color: white;
+    font-family: cursive;
+    text-align: center;
+    padding-top: 200px;
+    animation: anime1 2s ease;
+  }
+  &__text{
+    padding-left: 100px;
+    padding-top: 350px;
+    color: white;
+    font-family: cursive;
+    text-align: center;
+    font-size: 50px;
+    animation: anime1 2s ease;
+    @keyframes anime1 {
+      0% {
+          opacity:  0;
+          top: 50px;
+      }
+      100% {
+          opacity:  1;
+          top: 0;
+      }
+    }
+  }
+}

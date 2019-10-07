@@ -1,18 +1,19 @@
-%h1 ログインアプリ
 - if user_signed_in?
+  %h1 Plan
   / ユーザーがログインしているか調べる
   / ユーザーがログインしていた時の処理
   %h2
     現在 #{current_user.name} さんがログインしています
   / ここを追加します
   %h4
-    メールアドレス： #{current_user.email}
   = link_to "ログアウト", destroy_user_session_path, method: :delete
   / ログアウトをする
 - else
   / ユーザーがログインしていなかった時の処理
-  %h2 現在ログインしていません
-  = link_to "ログイン", new_user_session_path, class: 'post'
-  / ログイン画面に移行する
-  = link_to "新規登録", new_user_registration_path, class: 'post'
-  / 新規登録画面に移行する
+  .top-main
+    %h1 schedule
+    .top-main__text
+      = link_to "Current schedule", new_user_session_path, class: 'post'
+      / ログイン画面に移行する
+      = link_to "New schedule", new_user_registration_path, class: 'post'
+      / 新規登録画面に移行する

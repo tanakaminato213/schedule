@@ -1,0 +1,51 @@
+.log-main{
+  background-image: image-url("log.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  a:link{
+    color: black;
+    font-family: cursive;
+  }
+  a:visited{
+    color: black;
+    font-family: cursive;
+  }
+  h2{
+    font-size: 60px;
+    color: black;
+    font-family: cursive;
+    padding-top: 80px;
+    animation: anime1 2s ease;
+  }
+  &__field{
+    animation: anime1 2s ease;
+    margin-top: 30px;
+    label{
+      font-family: cursive;
+      font-size: 60px;
+      color: black;
+    }
+  }
+  &__actions{
+    input{
+      font-family: cursive;
+      animation: anime1 2s ease;
+      margin-top: 30px;
+      display: inline-block;
+      width: 180px;
+      text-align: center;
+      font-size: 16px;
+      color: #FFF;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 12px 24px;
+      border-radius: 4px;
+      background-image: linear-gradient(-30deg, rgb(17, 6, 2), rgb(1, 7, 19));
+      transition: .5s;
+      background-size: 200%;
+    }
+  }
+}
