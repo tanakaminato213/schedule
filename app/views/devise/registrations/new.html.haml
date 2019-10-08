@@ -21,6 +21,8 @@
       = f.label :password_confirmation
       %br/
       = f.password_field :password_confirmation, autocomplete: "new-password"
+    .sign-main__google
+      =link_to "Google account", user_google_oauth2_omniauth_authorize_path, method: 'post'
     .sign-main__actions
       = f.submit "New schedule"
   = render "devise/shared/links"

@@ -65,3 +65,6 @@ gem 'google-api-client'
 gem 'pry-rails'
 gem 'haml-rails'
 gem "erb2haml"
+gem "omniauth-rails_csrf_protection"
+gem "omniauth"
+gem 'omniauth-google-oauth2'

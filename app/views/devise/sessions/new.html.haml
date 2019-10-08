@@ -13,6 +13,8 @@
       .log-main__field
         = f.check_box :remember_me
         = f.label :remember_me
+    .log-main__google
+      =link_to "Google account", user_google_oauth2_omniauth_authorize_path, method: 'post'
     .log-main__actions
       = f.submit "Current schedule"
   = render "devise/shared/links"
