@@ -68,3 +68,4 @@ gem "erb2haml"
 gem "omniauth-rails_csrf_protection"
 gem "omniauth"
 gem 'omniauth-google-oauth2'
+gem 'google-api-client'
